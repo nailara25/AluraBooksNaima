@@ -39,16 +39,20 @@
 }
 
 .lista-menu__titulo{
-    color: var(--amarelo);
+    color: var(--amarelo);  
+    font-weight: 700;
+    
 }
 
 .lista-menu__link{
     background: var(--roxo-degrade);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: darkblue;
     background-clip: text;
     text-transform: uppercase;
 }
+
+
+
 
 
 
