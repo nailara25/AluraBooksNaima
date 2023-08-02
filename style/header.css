@@ -18,9 +18,26 @@
     display: flex;
     align-items: center;
 }
+
 .container__imagem{
     padding: 1em;
 }
+
+.container__botao {
+       display: none;
+    }
+    
+ .container__titulo {
+       display: none;
+    }
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer {
+         background-image: url("../img/img/Aberto.svg");
+        }
+        
+.container__botao:checked~.container__rotulo {
+         background: var(--azul-degrade);
+        }
+        
 
 .lista-menu{
     display: none;
@@ -51,8 +68,103 @@
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 1024px) {
 
+      .container__titulo,
+      .container__titulo--negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    
+      }
+    
+      .container__titulo {
+        font-weight: 400;
+        display: block;
+        color: rgb(0, 0, 0);
+        padding-right: 2em;
+      }
+    
+      .container__titulo--negrito {
+        font-weight: 700;
+      }
+    
+      .opções {
+        display: flex;
+      }
+    
+      .opções__item {
+        padding: 0 1em;
+        color: rgb(3, 3, 3);
+    
+      }
+    
+      .opções__link {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+    
+      .container__imagem-transparente {
+        display: none;
+      }
+    
+      .cabeçalho__menu-hamburguer {
+        display: none;
+      }
+    
+      .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+      }
+    
+      .opções__botão {
+        display: none;
+      }
+    
+      .opções__botão:checked~.opções__rotulo>.opções__item {
+        background-color: rgb(0, 0, 0);
+        color: black  ;
+      }
+    
+      .opções__item {
+        padding: 2em 1em;
+      }
+    
+      .lista-menu__item:hover {
+        background: var(--azul-degrade);
+      }
+    
+      .lista-menu__item:hover>.lista-menu__link {
+        color: pink;
+        text-decoration: none;
+      }
+    
+    }
 
-
+/*tablet*/
+@media screen and (min-width: 1728px) {
+      .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: yellow;
+      }
+    
+      .cabeçalho {
+        padding: 0 2em;
+      }
+    
+      .opções {
+        margin-right: auto;
+      }
+    
+      .container__texto {
+        display: block;
+        color: pink;
+      }
+    
+      .container__titulo{
+        display: flex;
+      }
+    }
 
 
