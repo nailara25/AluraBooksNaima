@@ -1,0 +1,20 @@
+@import url(style/header.css);
+@import url(style/banner.css);
+@import url(style/carrossel.css);
+
+:root{
+    --cor-de-fundo:#EBECEE;/*colocar todas as cores na aula 2*/
+    --branco: #ffffff;
+    --laranja: #EB9B00;
+    --azul-degrade: darkblue;
+    --azul: #002F52;
+    --preto: #000000;
+    --cinza: #474646;
+    --cinza-claro: #858585;
+
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
