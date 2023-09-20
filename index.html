@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraBooks Manu e Nai</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />     
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,9 +35,11 @@
             </li>
      </ul>
      
-           <img src="img/img/Logo.svg" alt="logo da AluraBooks" class="container__imagem">
-           <h1 class="container__titulo"><b class="container__titulo--negrito">Alura</b>Books</h1>
+           <img src="img/Logo.svg" alt="Logo da AluraBooks" class="container__imagem">
+           <h1 class="cantainer__titulo"> Alura Books </h1>
         </div>
+
+
 
         <ul class="opções">
             <input type="checkbox" id="opções-menu" class="opções__botão">
@@ -66,16 +69,81 @@
 
 
 
-
         <div class="container">
-            <a href="#"><img src="img/img/Favoritos.svg" alt="" class="container__imagem"></a>
-            <p class="container__texto"> Favoritos</p>
-            <a href="#"><img src="img/img/Compras.svg" alt="" class="container__imagem"></a>
-            <p class="container__texto">Minhas Compras</p>
-            <a href="#"><img src="img/img/Usuário.svg" alt="" class="container__imagem"></a>
-            <p class="container__texto"> Perfil</p>
+            <a href="#"><img src="img/Favoritos.svg" alt="" class="container__imagem"></a>
+            <a href="#"><img src="img/Compras.svg" alt="" class="container__imagem"></a>
+            <p class="cotainer__texto"> Minhas Compras </p>
+            <a href="#"><img src="img/Usuário.svg" alt="" class="container__imagem"></a>
+            <p class="container__texto"> Meu Perfil </p>
         </div>
     </header>
+
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">
+            Encontre em nossa estante o que precisa para seu desenvolvimento!
+        </p>
+        <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+    </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <div class="carrossel__container">
+            <div class="swiper">
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="img/ApacheKafka.png"
+                            alt="Livro sobre apache kafka e spring boot da alura books"></div>
+                    <div class="swiper-slide"><img src="img/Liderança.png"
+                            alt="Livro sobre liderança em design da alura books"></div>
+                    <div class="swiper-slide"><img src="img/Javascript.png"
+                            alt="Livro sobre javascript assertivo da alurabooks"></div>
+                    <div class="swiper-slide"><img src="img/Guia Front-end.png" alt="Livro Guia front end"></div>
+                    <div class="swiper-slide"><img src="img/Portugol.png" alt="Livro sobre portugol"></div>
+                    <div class="swiper-slide"><img src="img/Liderança.png" alt="livro sobre acessibilidade"></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="card">
+                <div class="card__descricao">
+                    <div class="descricao">
+                        <h3 class= "descricao__titulo">Talvez você também se interesse por...</h3>
+                        <h2 class= "descricao__titulo-livro">Angular 11 e Firebase</h2>
+                        <p class= "descricao__texto">
+                            Construindo uma aplicação integrada com a plataforma do Google.
+                        </p>
+                    </div>
+                    <img src= "img/Angular.png" class= "descricao__imagem">
+                </div>
+                <!-- Segunda linha -->
+                <div class= "card__botoes">
+                <!-- Primeira coluna -->
+                <ul class= "botoes">
+                    <li class= "botoes__item"><img src= "img/Favoritos.svg"  alt= "Favoritar livro"></li>
+                    <li class= "botoes__item"><img src= "img/Compras.svg"  alt= "Adicionar no carrinho de compras"></li>
+                </ul>
+                <a href="#" class="botoes__ancora">Saiba Mais...</a>
+                </div>
+            </div>
+</section>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+
     
 </body>
 </html>
